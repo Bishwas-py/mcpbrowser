@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.bishwas-py/mcpbrowser",
+  "name": "io.github.Bishwas-py/mcpbrowser",
   "title": "MCP Browser",
   "description": "Read Reddit, X, LinkedIn, Facebook and Pinterest through your own Chrome login. No API keys needed.",
   "repository": {
