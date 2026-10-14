@@ -92,8 +92,13 @@ jobs:
           SMITHERY_API_KEY: ${{ secrets.SMITHERY_API_KEY }}
         run: |
           npx -y @smithery/cli@4.11.1 mcp publish dist/smithery.mcpb -n bishwasbh/mcpbrowser
-          DESC=$(python3 -c "import json,zipfile; print(json.loads(zipfile.ZipFile('dist/smithery.mcpb').read('manifest.json'))['description'])")
-          curl -sf -X PATCH "https://api.smithery.ai/servers/bishwasbh/mcpbrowser" \
-            -H "Authorization: Bearer $SMITHERY_API_KEY" \
-            -H "Content-Type: application/json" \
-            -d "$(python3 -c "import json,sys; print(json.dumps({'displayName':'MCP Browser','description':sys.argv[1]}))" "$DESC")"
+          python3 - <<'EOF'
+          import json, os, urllib.request, zipfile
+          manifest = json.loads(zipfile.ZipFile("dist/smithery.mcpb").read("manifest.json"))
+          body = json.dumps({"displayName": "MCP Browser", "description": manifest["description"]}).encode()
+          req = urllib.request.Request(
+              "https://api.smithery.ai/servers/bishwasbh/mcpbrowser", data=body, method="PATCH",
+              headers={"Authorization": "Bearer " + os.environ["SMITHERY_API_KEY"], "Content-Type": "application/json"},
+          )
+          print(urllib.request.urlopen(req).read().decode())
+          EOF
