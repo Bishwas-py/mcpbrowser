@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.bishwas-py/mcpbrowser",
+  "title": "MCP Browser",
+  "description": "Read Reddit, X, LinkedIn, Facebook, Pinterest, Medium, Dev.to and BlackHatWorld, plus your Search Console, GA4 and Clarity data, through your own Chrome login. No API keys.",
+  "repository": {
+    "url": "https://github.com/Bishwas-py/mcpbrowser",
+    "source": "github"
+  },
+  "websiteUrl": "https://webmatrices.com/mcpbrowser",
+  "version": "0.12.2",
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/Bishwas-py/mcpbrowser/releases/download/v0.12.2/mcpbrowser-0.12.2.mcpb",
+      "fileSha256": "67624250be92a8a3b9b49f3ab2a3d3ba0470b5da57cbc1d64f71f706c0486877",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
