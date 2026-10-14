@@ -8,12 +8,12 @@
     "source": "github"
   },
   "websiteUrl": "https://webmatrices.com/mcpbrowser",
-  "version": "0.12.2",
+  "version": "0.12.4",
   "packages": [
     {
       "registryType": "mcpb",
-      "identifier": "https://github.com/Bishwas-py/mcpbrowser/releases/download/v0.12.2/mcpbrowser-0.12.2.mcpb",
-      "fileSha256": "67624250be92a8a3b9b49f3ab2a3d3ba0470b5da57cbc1d64f71f706c0486877",
+      "identifier": "https://github.com/Bishwas-py/mcpbrowser/releases/download/v0.12.4/mcpbrowser-0.12.4.mcpb",
+      "fileSha256": "a0c291b8e4d853ee9c94d01d79124c4f8268260b3d1df09aa3a7bde1333e7c5c",
       "transport": {
         "type": "stdio"
       }
